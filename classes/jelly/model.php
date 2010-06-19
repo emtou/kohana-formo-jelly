@@ -34,8 +34,7 @@ class Jelly_Model extends Jelly_Model_Core {
 		if (isset($this->form))
 			return $this->get('form');
 			
-		return $this->form = Formo::factory()
-			->orm('load', $this);	
+		return $this->form = Formo::form()->orm->load($this);
 	}
 	
 	// Pull a subform out of the full form
